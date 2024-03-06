@@ -1,9 +1,35 @@
 *{
-    font-family: 'Micro 5';
+    font-family: 'Anta';
 }
 
 body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    background-image: url('45937.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.sketchBoard{
+    border: 5px solid black;
+    height: 600px;
+    width: 600px;
+    background-color: white;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 300px;
+    margin-top: 10px;
 }
