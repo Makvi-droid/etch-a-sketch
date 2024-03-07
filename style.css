@@ -13,6 +13,10 @@ body{
     background-size: cover;
 }
 
+h1{
+    padding-top: 20px;
+}
+
 .sketchBoard{
     border: 5px solid black;
     height: 550px;
