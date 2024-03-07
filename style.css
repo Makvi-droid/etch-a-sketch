@@ -15,9 +15,9 @@ body{
 
 .sketchBoard{
     border: 5px solid black;
-    height: 600px;
-    width: 600px;
-    background-color: white;
+    height: 550px;
+    width: 550px;
+    background-color: whitesmoke;
 }
 
 .header{
@@ -32,4 +32,7 @@ body{
     justify-content: space-between;
     width: 300px;
     margin-top: 10px;
+    align-items: center;
 }
+
+
