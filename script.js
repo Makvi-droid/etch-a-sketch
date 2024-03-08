@@ -10,7 +10,15 @@ function createSize(size) {
     for (let i = 0; i < divs; i++) {
         let divGrid = document.createElement('div');
         divGrid.addEventListener('mouseover', function(){
-            divGrid.style.backgroundColor = 'black';
+            if(color === 'black'){
+                divGrid.style.backgroundColor = 'black';
+            }
+            else if(color === 'random'){
+                divGrid.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+            }
+            else if(color === 'white'){
+                sketchBoard.style.backgroundColor = 'white';
+            }
         });
         sketchBoard.insertAdjacentElement('beforeend', divGrid);
     }
@@ -31,7 +39,6 @@ function getSize() {
     }
 }
 
-
 document.querySelector('#size').addEventListener('keypress', function(event) {
     if (event.key === 'Enter') {
         getSize();
@@ -41,13 +48,16 @@ document.querySelector('#size').addEventListener('keypress', function(event) {
 let blackBtn = document.querySelector('#blackBtn');
 let randomBtn = document.querySelector('#randomBtn');
 let resetBtn = document.querySelector('#resetBtn');
-let color = 'black';
+let color;
 
-blackBtn.addEventListener('click', function(){
-    divGrid.style.backgroundColor = 'black';
+blackBtn.addEventListener('click', function() {
+    color = 'black';
 });
 
-randomBtn.addEventListener('click', function(){
-    divGrid.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+randomBtn.addEventListener('click', function() {
+    color = 'random';
 });
 
+resetBtn.addEventListener('click', function(){
+    color = 'white';
+});
