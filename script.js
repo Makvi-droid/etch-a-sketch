@@ -16,9 +16,6 @@ function createSize(size) {
             else if(color === 'random'){
                 divGrid.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
             }
-            else if(color === 'white'){
-                sketchBoard.style.backgroundColor = 'white';
-            }
         });
         sketchBoard.insertAdjacentElement('beforeend', divGrid);
     }
@@ -59,5 +56,9 @@ randomBtn.addEventListener('click', function() {
 });
 
 resetBtn.addEventListener('click', function(){
-    color = 'white';
+    let divGrids = document.querySelectorAll('.sketchBoard div');
+    divGrids.forEach(function(divGrid) {
+        divGrid.style.backgroundColor = 'white';
+    });
 });
+
